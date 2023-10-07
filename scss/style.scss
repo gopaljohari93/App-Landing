@@ -1,0 +1,1496 @@
+/* Google Font CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    --webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:active,
+:hover,
+:focus {
+    outline: 0 !important;
+    outline-offset: 0;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+================================
+    Custom Scollbar Smooth
+================================
+*/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fdfdfe;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #fcae61;
+}
+
+/*
+================================
+   Sass Variables and Nesting 
+================================
+*/
+/* Background Color */
+$bg-white: #fdfdfe;
+$bg-btn-blue: #2500f9;
+
+/* Text Color */
+$text-blue: #2500f9;
+$text-white: #ffffff;
+$text-dark-gray: #242f51;
+$text-light: #616368;
+$text-orange: #fcae61;
+
+/* Fonts */
+$normal-font-weight: 400;
+$bold-font-weight: 700;
+
+/* custon css */
+.main-btn {
+    font-size: 16px;
+    font-weight: 700;
+    color: $text-white;
+    display: inline-block;
+    transition: .2s;
+    box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 40px 40px 40px 0;
+    padding: 14px 30px !important;
+    background-color: #2500f9;
+    text-decoration: none;
+}
+
+.main-btn:hover {
+    background-color: #fcae61;
+    color: $text-white;
+}
+
+.main-btn:hover,
+.main-btn:active,
+.main-btn:focus {
+    border-radius: 0 40px 40px 40px;
+}
+
+/*
+================================
+    1 Header Navbar CSS
+================================
+*/
+.header-wrapper .navbar {
+    -webkit-transition: all 2s linear;
+    -o-transition: all 2s linear;
+    -moz-transition: all 2s linear;
+    -ms-transition: all 2s linear;
+    transition: all 2s linear;
+    background-color: $bg-white;
+}
+
+.header-wrapper .navbar-brand {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fcae61;
+    line-height: 1.25;
+}
+
+.header-wrapper .navbar-brand span {
+    color: #242f51;
+}
+
+.header-wrapper .menu-navbar-nav {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-wrapper .nav-item {
+    margin: 16px 10px;
+}
+
+.header-wrapper .nav-item .nav-link {
+    font-size: 16px;
+    font-weight: 400;
+    color: #232e51;
+    line-height: 1.25;
+}
+
+.header-wrapper .nav-item .try-btn {
+    color: $text-white;
+    font-weight: 700;
+}
+
+/* navbar active class change css style */
+.header-wrapper .nav-item .nav-link.active {
+    color: $text-orange;
+}
+
+.header-wrapper .nav-item .main-btn:hover {
+    background-color: #fcae61;
+}
+
+/* Navbar Scroll Fixed CSS*/
+.header-scrolled {
+    position: fixed;
+    margin-top: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 4px 6px 0 rgba(12, 0, 46, 0.5);
+    box-shadow: 0 4px 6px 0 rgba(12, 0, 46, 0.5);
+}
+
+/*
+================================
+   2 Top Banner
+================================
+*/
+.banner_wrapper {
+    display: flex;
+    align-items: center;
+    max-width: 1170px;
+    margin: auto;
+}
+
+.banner_wrapper .banner-subtitle {
+    display: flex;
+    background-color: #e2eaed;
+    max-width: 360px;
+    border-radius: 20px;
+    height: 40px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.banner_wrapper .banner-subtitle .fa-check-circle {
+    font-size: 40px;
+    color: #feaa25;
+}
+
+.banner_wrapper .banner-subtitle p {
+    font-size: 18px;
+    padding: 2px 5px;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.banner_wrapper .banner-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #242f50;
+}
+
+.banner_wrapper .banner-title-text {
+    font-size: 18px;
+    font-weight: 400;
+    max-width: 36.375rem;
+    margin: 10px 0 18px;
+    color: #616267;
+}
+
+
+.banner_wrapper .btn-section .btn-header {
+    font-weight: 400;
+    color: #2c09f9;
+    background: transparent;
+    border: 2px solid #fcae61;
+}
+
+.banner_wrapper .header-img-section {
+    margin-top: 8rem;
+}
+
+/* Animation Rectangle & Circle Shapes */
+.rectangle-shape,
+.circle-shape {
+    content: '';
+    border: 0.25rem solid;
+    border-bottom-color: #ef6d9f;
+    border-right-color: #ef6d9f;
+    border-top-color: #ee8d6d;
+    border-left-color: #ee8d6d;
+    background-image: -moz-linear-gradient(top, #ee8d6d 0%, #ef6d9f 100%);
+    background-image: -webkit-gradient(top, #ee8d6d 0%, #ef6d9f 100%);
+    background-image: linear-gradient(to bottom, #ee8d6d 0%, #ef6d9f 100%);
+    filter: progid:DXImagetransform.Microsoft.gradient(startColorstr='$colorBtnPrimaryHover', endColorstr='$colorPrimary', GridientType=0);
+    background-size: 100% 0;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 40%;
+    margin: auto;
+}
+
+.rectangle-shape.small,
+.circle-shape.small {
+    border-width: 0.1875rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    animation: animationframesone 35s alternate infinite linear;
+}
+
+.rectangle-shape.large,
+.circle-shape.large {
+    width: 2.5rem;
+    height: 2.5rem;
+    animation: animationframesthree 35s alternate infinite linear;
+}
+
+.circle-shape.large {
+    left: 0;
+    right: 0;
+    bottom: 15%;
+    opacity: .5;
+}
+
+.rectangle-shape.small {
+    left: 0;
+    bottom: 10%;
+}
+
+.rectangle-shape {
+    border-radius: 0.1875rem;
+}
+
+.circle-shape {
+    border-radius: 50%;
+}
+
+@keyframes animationframesone {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    20% {
+        transform: translate(-4.5625rem, -0.0625rem) rotate(36deg);
+    }
+
+    40% {
+        transform: translate(8.8125rem, 4.5rem) rotate(72deg);
+    }
+
+    60% {
+        transform: translate(5.1875rem, 7.625rem) rotate(108deg);
+    }
+
+    80% {
+        transform: translate(-2.5rem, 4.5rem) rotate(144deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+
+@keyframes animationframesthree {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1.2);
+    }
+
+    20% {
+        transform: translate(-4.25rem, -6.25rem) rotate(70deg) scale(0.5);
+    }
+
+    40% {
+        transform: translate(7.1875rem, 3.4375rem) rotate(120deg) scale(1);
+    }
+
+    60% {
+        transform: translate(2.1875rem, 8.75rem) rotate(155deg) scale(1.2);
+    }
+
+    80% {
+        transform: translate(2.1875rem, 5.625rem) rotate(180deg) scale(0.5);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+}
+
+/*
+================================
+        3 Clients
+================================
+*/
+.clients {
+    padding: 90px 0 50px;
+    background-color: #ffffff;
+}
+
+.clients h2 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #646b83;
+    margin-bottom: 40px;
+}
+
+.slider-img-section .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+.slider-img-section .item img {
+    width: auto !important;
+    height: 50px;
+    object-fit: cover;
+}
+
+/*
+================================
+    4 Features
+================================
+*/
+.features-wrapper {
+    padding: 120px 0 100px;
+}
+
+.features-wrapper .feature {
+    padding-left: 40px;
+}
+
+.features-wrapper .feature h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #232e51;
+}
+
+.features-wrapper .feature-sec .icon {
+    background-color: #ffecef;
+    width: 16%;
+    height: 91px;
+    text-align: center;
+    margin-top: 16px;
+    padding-top: 18px;
+    border-radius: 50%;
+}
+
+.features-wrapper .feature-sec .icon-2 {
+    background-color: #f4f4ff;
+}
+
+.features-wrapper .feature-sec .icon-3 {
+    background-color: #e4ffee;
+}
+
+.features-wrapper .feature .para-inc {
+    font-size: 16px;
+    font-weight: 400;
+    color: #616268;
+    margin-bottom: 60px;
+    max-width: 435px;
+}
+
+.features-wrapper .feature-sec h3 {
+    font-size: 20px;
+    font-weight: 600;
+    padding-left: 2rem;
+}
+
+.features-wrapper .feature-sec .fast {
+    color: #f55767;
+}
+
+.features-wrapper .feature-sec .proto {
+    color: #2563ff;
+}
+
+.features-wrapper .feature-sec .vec {
+    color: #40975f;
+}
+
+.features-wrapper .feature-sec p {
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 1.9rem;
+    max-width: 332px;
+    margin-bottom: 50px;
+    color: #88898d;
+}
+
+/*
+================================
+    5 Smart jackpots
+================================
+*/
+.pricing-wrapper {
+    padding: 40px 0 100px;
+
+    .pric-section {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 80px;
+
+        h2 {
+            font-size: 40px;
+            font-weight: 600;
+            color: $text-dark-gray;
+        }
+    }
+
+    #border {
+        border-right: 1px solid #b9b9b8;
+        height: 160px;
+        margin-right: 42px;
+        margin-left: -40px
+    }
+
+    .mob-dec {
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 2.5rem;
+        max-width: 412px;
+        color: $text-light;
+    }
+
+    .row-center {
+        max-width: 1060px;
+        margin: auto;
+
+        .auto-section {
+            .auto-icon {
+                width: 30%;
+                height: 98px;
+                background: #ffecef;
+                padding: 18px;
+                text-align: center;
+                border-radius: 50%;
+                line-height: 2;
+                margin-bottom: 32px;
+            }
+
+            .auto-color-2 {
+                background-color: #f4f4ff;
+            }
+
+            .auto-color-3 {
+                background-color: #e4ffee;
+            }
+
+            .icon-sec {
+                font-size: 24px;
+                font-weight: 400;
+
+                .fa-envelope-open-text {
+                    color: #fbacb4;
+                }
+
+                .fa-network-wired {
+                    color: #2563ff;
+                }
+
+                .fa-palette {
+                    color: #3f975f;
+                }
+            }
+        }
+
+        .icon-text {
+            h3 {
+                font-size: 20px;
+                font-weight: 600;
+            }
+
+            .rec {
+                color: #f55767;
+            }
+
+            .eff {
+                color: #2563ff;
+            }
+
+            .big {
+                color: #40975f;
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: 400;
+                max-width: 265px;
+                color: $text-light;
+            }
+        }
+    }
+
+    .design {
+        padding: 60px 40px;
+
+        .design-section {
+            margin-left: 2.5rem;
+            margin-top: 4.5rem;
+
+            h2 {
+                font-size: 36px;
+                font-weight: 600;
+                color: $text-dark-gray;
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: 400;
+                color: $text-light;
+                max-width: 408px;
+                margin: 16px 0 30px;
+            }
+
+        }
+    }
+}
+
+/*
+================================
+  6 Why you should choose
+================================
+*/
+.should-wrapper {
+    padding: 0 0 0px;
+
+    h2 {
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        color: $text-dark-gray;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        max-width: 640px;
+        margin: auto;
+        margin-bottom: 12rem;
+        color: #616368;
+    }
+
+    .choose {
+        max-width: 1140px;
+        margin-right: auto;
+        margin-left: auto;
+
+        h3 {
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            color: $text-dark-gray;
+        }
+
+        .get {
+            font-size: 16px;
+            font-weight: 400;
+            text-align: center;
+            max-width: 262px;
+        }
+    }
+
+    .ft-1::before {
+        content: url(../images/icons/consultancy.png);
+        background-color: #ffecef;
+    }
+
+    .ft-section::before {
+        position: absolute;
+        display: block;
+        margin-top: -70px;
+        transform: translate(114%, -50%);
+        padding: 21px 26px;
+        border-radius: 50%;
+    }
+
+    .ft-2::before {
+        content: url(../images/icons/deadline.png);
+        background-color: #eaf9ff;
+    }
+
+    .ft-3::before {
+        content: url(../images/icons/data.png);
+        background-color: #fff6d3;
+    }
+
+    .ft-4::before {
+        content: url(../images/icons/flexible.png);
+        background-color: #e4ffee;
+    }
+
+    .ft-5::before {
+        content: url(../images/icons/simple.png);
+        background-color: #f4f4ff;
+    }
+
+    .ft-6::before {
+        content: url(../images/icons/solutions.png);
+        background-color: #fdeee4;
+    }
+}
+
+/*
+================================
+  7 Ultimate features
+================================
+*/
+.ultimate-wrapper {
+    padding: 0 11% 20px;
+    margin-top: -30px;
+
+    h2 {
+        font-size: 36px;
+        font-weight: 600;
+        color: $text-dark-gray;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        max-width: 398px;
+        color: $text-light;
+    }
+
+    .title {
+        font-size: 20px;
+        font-weight: 600;
+        color: $text-light;
+    }
+
+    .sub-title {
+        max-width: 270px;
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 15px;
+        color: $text-light;
+    }
+
+    .ut-section::before {
+        position: absolute;
+        display: block;
+        margin-top: -70px;
+        transform: translate(0%, -50%);
+        padding: 16px 20px;
+        border-radius: 50%;
+    }
+
+    .ut-1::before {
+        content: url(../images/icons/flexible.png);
+        background-color: #ffecef;
+    }
+
+    .ut-2::before {
+        content: url(../images/icons/consultancy.png);
+        background-color: #e4ffee;
+    }
+
+    .ut-3::before {
+        content: url(../images/icons/deadline.png);
+        background-color: #fff6d3;
+    }
+
+    .ut-4::before {
+        content: url(../images/icons/solutions.png);
+        background-color: #f4f4ff;
+    }
+
+    .mt-10 {
+        margin-top: 10rem;
+    }
+
+    .see-all-btn {
+        padding: 14px 50px !important;
+    }
+}
+
+/*
+================================
+   8 Get awesome features
+================================
+*/
+.awesome-wrapper {
+    padding: 100px 0;
+}
+
+.awesome-wrapper h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: $text-dark-gray;
+    margin-bottom: 30px;
+}
+
+.awesome-wrapper p {
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 578px;
+    margin: auto;
+    margin-bottom: 60px;
+    color: $text-light;
+}
+
+/* tabs css start */
+.awesome-wrapper ul.nav-pills {
+    border: 2px solid #ebebeb;
+    border-radius: 50px;
+    max-width: 272px;
+    padding: 2px;
+    margin: auto;
+}
+
+.awesome-wrapper ul li .nav-link {
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    transition: all 0.45s cubic-bezier(0, 0, 0, 2, 1);
+    display: inline-block;
+    border: 0;
+    padding: 14px 30px;
+    color: #898a8e;
+
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #2500f9;
+}
+
+/* tabs css end */
+
+/* card css start */
+.awesome-wrapper .card-section {
+    max-width: 618px;
+    margin: auto;
+}
+
+.awesome-wrapper .pricing-card {
+    background-color: #fff;
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px 36px 24px 40px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+}
+
+.awesome-wrapper .pricing-card:hover {
+    box-shadow: 0 1px 20px rgba(255, 255, 255, 0.5);
+    z-index: 5;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.awesome-wrapper .pricing-card .dec {
+    font-size: 18px;
+    font-weight: 400;
+    color: #999ca5;
+}
+
+.awesome-wrapper .pricing-card span {
+    font-size: 60px;
+    font-weight: 600;
+    color: $text-dark-gray;
+}
+
+
+.awesome-wrapper .pricing-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: $text-dark-gray;
+}
+
+.awesome-wrapper .pricing-card p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #999ca5;
+}
+
+.awesome-wrapper .pricing-card .learn-btn {
+    border-radius: 50px;
+    margin-top: 20px;
+    padding: 14px 38px !important;
+}
+
+.awesome-wrapper .pricing-card .learn-more-btn {
+    font-weight: 400;
+    margin: 17px 0 -6px;
+    color: #2500f9;
+}
+
+.awesome-wrapper .pricing-card .pricing-plan ul {
+    list-style: none;
+}
+
+.awesome-wrapper .pricing-card .pricing-plan li {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 11px 0;
+    color: #999ca5;
+}
+
+.awesome-wrapper .pricing-card .pricing-plan .see-btn {
+    border-radius: 50px !important;
+    display: inline-block;
+}
+
+.awesome-wrapper .pricing-fec {
+    border: 2px solid #ebebeb;
+}
+
+/* card css end */
+
+
+/*
+================================
+  9 Testimonials
+================================
+*/
+.testimonial-wrapper {
+    padding: 0 0 50px;
+
+    .people-section {
+        .user-title {
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 1.25;
+            margin-bottom: 22px;
+            color: $text-dark-gray;
+        }
+
+        .user-subsection {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.5;
+            max-width: 480px;
+            margin-bottom: 30px;
+            color: $text-light;
+        }
+    }
+
+    .testimonial {
+        .fa-star {
+            color: #ffcc00;
+            font-size: 20px;
+        }
+    }
+
+    .user-section {
+        h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: $text-dark-gray;
+            margin: 20px 0 22px;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            color: $text-light;
+            max-width: 580px;
+            margin-bottom: 40px;
+        }
+    }
+
+    .testimonial-slider {
+        .slider-content {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            img {
+                font-size: 18px;
+                border-radius: 50%;
+                padding: 10px 0;
+                width: 95px
+            }
+
+            h3 {
+                font-size: 18px;
+                font-weight: 600;
+                padding-left: 20px;
+                color: $text-dark-gray;
+            }
+
+            span {
+                font-size: 18px;
+                font-weight: 400;
+                color: $text-light;
+                padding-left: 20px;
+            }
+        }
+    }
+}
+
+/*
+================================
+        10 FAQ 
+================================
+*/
+.faq-wrapper {
+    padding: 100px 0 100px;
+
+    .faq_title {
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 1.5;
+        margin-bottom: 18px;
+        color: $text-dark-gray;
+    }
+
+    .faq-subtitle {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.25;
+        color: #616368;
+        max-width: 640px;
+        margin: auto;
+    }
+}
+
+/* faq change css style */
+.faq-wrapper .accordion-button:hover,
+.faq-wrapper .accordion-button:focus {
+    box-shadow: none;
+    background-color: #f5f7fa;
+    color: $text-dark-gray;
+}
+
+.faq-wrapper .accordion-item {
+    border: 0;
+    background-color: #f5f7fa;
+    max-width: 960px;
+    margin: auto;
+}
+
+.faq-wrapper .accordion-button {
+    font-size: 20px;
+    font-weight: 600;
+    color: $text-dark-gray;
+    border-radius: 0;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* add plus icon set faq */
+.faq-wrapper .accordion-button::after {
+    content: '\002B';
+    font-family: "Font Awesome 5 Free";
+    background-image: none;
+    display: inline-block;
+}
+
+/* add minus icon set faq */
+.faq-wrapper .accordion-button:not(.collapsed)::after {
+    content: '\2212';
+    font-family: "Font Awesome 5 Free";
+    background-image: none;
+    transform: unset;
+    display: inline-block;
+    font-weight: 800;
+}
+
+.faq-wrapper .accordion-body {
+    color: #616368;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 20px 4px;
+    padding-bottom: 50px;
+    line-height: 1.5;
+    max-width: 860px;
+}
+
+/*
+================================
+  11 Try for free
+================================
+*/
+.download-app-wrapper {
+    padding: 40px 0 26px;
+
+    h2 {
+        font-size: 48px;
+        font-weight: 600;
+        color: #242f51;
+        line-height: 1.25;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        margin-bottom: 25px;
+        color: $text-light;
+    }
+
+    .app_btn {
+        .store-btn {
+            border-radius: 8px;
+            height: 52px;
+            margin: 10px 8px
+        }
+    }
+}
+
+/*
+================================
+     12 Footer 
+================================
+*/
+.footer_wrapper {
+    padding: 80px 0px;
+    background-color: #09142e;
+
+    .footer-logo {
+        font-size: 30px;
+        font-weight: 700;
+        color: $text-orange;
+
+        span {
+            color: $text-white;
+        }
+    }
+
+    .menu-list {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0px 40px;
+    }
+
+    li {
+        margin-right: 30px;
+        text-decoration: none;
+    }
+
+    a {
+        color: $text-white;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .social-icon .fab,
+    .fas {
+        color: #273043;
+        font-size: 30px;
+        margin-right: 18px;
+    }
+
+    .social-icon .fab:hover,
+    .fas:hover {
+        color: #ffffff;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .copyright {
+        font-size: 14px;
+        font-weight: 400;
+        margin-top: 72px;
+        color: #3d465a;
+        margin-bottom: 0;
+    }
+
+    .copyright:hover {
+        color: #fff;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+
+
+/*
+================================
+   Responsive CSS
+================================
+*/
+@media (max-width: 1300px) {
+
+    /* 2 Navbar */
+    .header-wrapper .menu-navbar-nav {
+        width: auto;
+    }
+
+    /* 3 Banner */
+    .banner_wrapper {
+        max-width: 1005px;
+    }
+
+    .banner_wrapper .banner-title {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 1230px) {
+
+    /* 2 Navbar */
+    .header-wrapper .nav-item {
+        margin: 0 5px;
+    }
+
+    .header-wrapper .nav-item .main-btn {
+        padding: 10px 20px !important;
+    }
+}
+
+@media (max-width: 1070px) {
+
+    /* 2 Navbar */
+    .header-wrapper .nav-item .nav-link {
+        font-size: 14px;
+    }
+
+    /* 3 Banner */
+    .banner_wrapper {
+        max-width: 880px;
+    }
+
+    .banner_wrapper .banner-title {
+        font-size: 40px;
+        margin: 1rem 0;
+    }
+
+    /* 4 Features*/
+    .features-wrapper .feature-sec .icon {
+        width: 20%;
+    }
+
+    /*  5 Smart jackpots */
+    .pricing-wrapper .pric-section h2 {
+        font-size: 34px;
+        font-weight: 600;
+        color: #242f51;
+    }
+
+    /* 9 Testimonials */
+    .testimonial-wrapper .people-section h2 {
+        font-size: 35px;
+    }
+
+    .testimonial-wrapper .people-section p {
+        font-size: 17px;
+    }
+
+    .testimonial-wrapper .user-section p {
+        font-size: 13px;
+        max-width: 425px;
+    }
+
+}
+
+/* most important part website responsive */
+@media (max-width: 991px) {
+
+    /* 2 Navbar */
+    .header-wrapper .navbar-brand img {
+        width: 180px;
+    }
+
+    /* bar boder none create mobile menu css */
+    .header-wrapper .navbar-toggler:focus {
+        box-shadow: none;
+    }
+
+    /* text-align: center create mobile menu css */
+    .header-wrapper .menu-navbar-nav {
+        text-align: center;
+    }
+
+    .header-wrapper .nav-item .nav-link {
+        font-size: 18px;
+        margin-top: 15px;
+    }
+
+    .header-wrapper .nav-item:last-child .nav-link {
+        margin-bottom: 20px;
+    }
+
+    /* background-color create mobile css */
+    .header-wrapper .navbar-collapse {
+        background-color: #ffffff;
+    }
+
+    /* 3 Banner */
+    .banner_wrapper .banner-title {
+        font-size: 38px;
+    }
+
+    .banner_wrapper .btn-section .btn-header {
+        margin-left: 8px;
+    }
+
+    .banner_wrapper .banner-subtitle {
+        margin-top: 100px;
+    }
+
+    /* 4 Features*/
+    .features-wrapper .feature h2 {
+        font-size: 30px;
+    }
+
+    .features-wrapper .feature .para-inc {
+        font-size: 14px;
+    }
+
+    .features-wrapper .feature-sec h3 {
+        font-size: 18px;
+    }
+
+    .features-wrapper .feature-sec p {
+        font-size: 14px;
+    }
+
+    /* 4 Features*/
+    .features-wrapper .feature-sec .icon {
+        width: 40%;
+    }
+
+    /* 5 Smart jackpots */
+    .pricing-wrapper .pric-section h2 {
+        font-size: 25px;
+        margin-top: 1rem;
+    }
+
+    .pricing-wrapper .mob-dec {
+        font-size: 14px;
+        margin-top: 1.5rem;
+    }
+
+    .pricing-wrapper .design .design-section {
+        margin-top: 0;
+    }
+
+    .pricing-wrapper .design .design-section h2 {
+        font-size: 25px;
+    }
+
+    .awesome-wrapper .pricing-card span {
+        font-size: 26px;
+    }
+    .main-btn {
+        padding: 11px 18px !important;
+    }
+    .download-app-wrapper h2 {
+        font-size: 27px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    /* 3 Banner */
+    .banner_wrapper {
+        padding: 100px 30px;
+    }
+
+    .banner_wrapper .banner-subtitle {
+        margin-top: 50px;
+    }
+
+    .banner_wrapper .btn-section .main-btn {
+        font-size: 13px;
+    }
+
+    .banner_wrapper .btn-section .main-btn {
+        padding: 8px 20px !important;
+    }
+
+    /* 4 Features*/
+    .features-wrapper .feature-sec .icon {
+        background: transparent;
+    }
+
+    .features-wrapper .feature {
+        padding-left: 0;
+        margin-top: 80px;
+    }
+
+    .features-wrapper .feature h2 {
+        text-align: center;
+    }
+
+    .features-wrapper .feature .para-inc {
+        text-align: center;
+    }
+
+    /* 5 Smart jackpots */
+    .pricing-wrapper .pric-section {
+        justify-content: center;
+    }
+
+    .pricing-wrapper #border {
+        display: none;
+    }
+
+    .pricing-wrapper .mob-dec {
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 80px;
+    }
+
+    .pricing-wrapper .row-center .auto-section .auto-icon {
+        margin: 30px auto;
+    }
+
+    .pricing-wrapper .row-center .icon-text .rec {
+        text-align: center;
+    }
+
+    .pricing-wrapper .row-center .icon-text p {
+        text-align: center;
+        max-width: inherit;
+    }
+
+    .pricing-wrapper .row-center .icon-text .eff {
+        text-align: center;
+    }
+
+    .pricing-wrapper .row-center .icon-text .big {
+        text-align: center;
+    }
+
+    .should-wrapper h2 {
+        font-size: 26px;
+    }
+
+    .should-wrapper p {
+        font-size: 14px;
+    }
+
+    /* 9 Testimonials */
+    .testimonial-wrapper .people-section h2 {
+        margin-top: 40px;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .testimonial-wrapper .people-section p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    /* faq */
+    .faq-wrapper .accordion-button {
+        font-size: 18px;
+    }
+
+    /* 11 Try for free */
+    .download-app-wrapper h2 {
+        font-size: 30px;
+        margin-top: -130px;
+    }
+
+    .download-app-wrapper p {
+        text-align: center;
+    }
+
+    .download-app-wrapper .app_btn .store-btn {
+        margin: auto;
+    }
+
+    .app-img-section img {
+        margin-top: 80px;
+    }
+    /* 12 footer */ 
+    .footer_wrapper li {
+        margin-right: 11px;
+    }
+    .footer_wrapper a {
+        font-size: 12px;
+    }
+    .testimonial-wrapper .people-section .user-title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width:400px) {
+
+    /* 3 Banner */
+    .banner_wrapper .banner-subtitle p {
+        font-size: 12px;
+    }
+
+    .banner_wrapper .banner-title {
+        font-size: 26px;
+    }
+
+    .banner_wrapper .btn-section .btn-header {
+        margin-left: 0px;
+        font-size: 10px;
+    }
+    .pricing-wrapper .design .design-section h2 {
+        font-size: 23px;
+    }
+    .ultimate-wrapper h2 {
+        font-size: 24px;
+    }
+    .awesome-wrapper h2 {
+        font-size: 28px;
+    }
+    .awesome-wrapper .pricing-card .pricing-plan li {
+        padding: 5px 0;
+    }
+    .should-wrapper h2 {
+        font-size: 20px;
+    }
+    .testimonial-wrapper .people-section .user-title {
+        font-size: 24px;
+    }
+    .faq-wrapper .faq_title {
+        font-size: 24px;
+    }
+    .main-btn {
+        font-size: 13px;
+    }
+   
+}
+@media (max-width:330px) {
+    .download-app-wrapper .app_btn .store-btn {
+        margin: 10px 
+    }
+    .banner_wrapper .btn-section .main-btn {
+        padding: 8px 14px !important;
+    }
+    .should-wrapper .ft-section::before {
+        transform: translate(80%, -50%);
+    }
+    .download-app-wrapper h2 {
+        font-size: 22px;
+        text-align: center;
+    }
+}
